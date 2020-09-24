@@ -20,7 +20,7 @@ import "github.com/go-openapi/runtime/middleware"
 ```
 go run main.go
 ```
-Swagger documentation can be viewed using the ReDoc UI in your browser at:
+Swagger documentation can be viewed in your browser at:
 ```
 swagger-ui:   http://localhost:8080/docs.
 swagger-spec: http://localhost:8080/swagger.yaml
