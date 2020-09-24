@@ -25,3 +25,5 @@ Swagger documentation can be viewed in your browser at:
 swagger-ui:   http://localhost:8080/docs.
 swagger-spec: http://localhost:8080/swagger.yaml
 ```
+
+see [guide](https://www.youtube.com/watch?v=07XhTqE-j8k&ab_channel=NicJackson)
