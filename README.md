@@ -16,7 +16,7 @@ swagger generate spec -o ./swagger.yaml --scan-models
 ```
 import "github.com/go-openapi/runtime/middleware"
 ```
-5) step: running your code and put this link in browser:
+5) step: running your code:
 ```
 go run main.go
 ```
