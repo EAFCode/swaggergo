@@ -10,7 +10,7 @@ go get -u github.com/go-swagger/go-swagger/cmd/swagger
 ```
 https://goswagger.io/use/spec/model.html
 ```
-3) step: Generete the file swagger.yaml using the following command in cmd:
+3) step: Generete the file swagger.yaml using the following command:
 ```
 swagger generate spec -o ./swagger.yaml --scan-models
 ```
