@@ -2,7 +2,7 @@
 
 Swagger documentation is generated from the code using [go-swagger](https://github.com/go-swagger/go-swagger) package.
 
-1) step: Get dependency in your  GOPATH
+1) step: Get dependency witch contains a golang implementation of Swagger 2.0 
 ```
 go get -u github.com/go-swagger/go-swagger/cmd/swagger
 ```
