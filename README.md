@@ -6,7 +6,7 @@ Swagger documentation is generated from the code using [go-swagger](https://gith
 ```
 go get -u github.com/go-swagger/go-swagger/cmd/swagger
 ```
-2) step: Adding metadata[route, param or model](https://goswagger.io/use/spec/meta.html) in your code.
+2) step: Adding [metadata](https://goswagger.io/use/spec/meta.html) in your code.
 ```
 https://goswagger.io/use/spec/model.html
 ```
