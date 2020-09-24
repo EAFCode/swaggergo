@@ -1,0 +1,142 @@
+basePath: /
+consumes:
+- application/json
+definitions:
+  Product:
+    description: Product defines the structure for an API product
+    properties:
+      description:
+        description: the Description for this product
+        example: string
+        type: string
+        x-go-name: Description
+      id:
+        description: the id for this product
+        example: 1
+        format: int64
+        type: integer
+        x-go-name: ID
+      name:
+        description: the name for this product
+        example: string
+        type: string
+        x-go-name: Name
+      price:
+        description: the price for this product
+        example: 1
+        format: double
+        minimum: 1
+        type: number
+        x-go-name: Price
+      sku:
+        description: the sku for this product
+        example: wwe-wea-aweasdas
+        type: string
+        x-go-name: SKU
+    required:
+    - id
+    - name
+    - description
+    - price
+    - sku
+    type: object
+    x-go-package: example01/data
+info:
+  description: API for manager products
+  title: API of products
+  version: 1.0.0
+paths:
+  /products:
+    get:
+      consumes:
+      - application/json
+      description: Return a list of products
+      operationId: listProducts
+      produces:
+      - application/json
+      responses:
+        "200":
+          $ref: '#/responses/productsResponse'
+      schemes:
+      - http
+      tags:
+      - products
+    post:
+      consumes:
+      - application/json
+      description: Save product in database
+      operationId: saveProducts
+      parameters:
+      - description: Body to save product in database
+        in: body
+        name: Product
+        schema:
+          $ref: '#/definitions/Product'
+      responses:
+        "200":
+          $ref: '#/responses/noContent'
+      schemes:
+      - http
+      tags:
+      - products
+  /products/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete product from the database
+      operationId: deleteProduct
+      parameters:
+      - description: The id of the product to delete from the database
+        format: int64
+        in: path
+        name: id
+        required: true
+        type: integer
+        x-go-name: ID
+      produces:
+      - application/json
+      responses:
+        "201":
+          $ref: '#/responses/noContent'
+      schemes:
+      - http
+      tags:
+      - products
+    put:
+      consumes:
+      - application/json
+      description: Save product in database
+      operationId: updateProduct
+      parameters:
+      - description: The id of the product to delete from the database
+        format: int64
+        in: path
+        name: id
+        required: true
+        type: integer
+        x-go-name: ID
+      - description: Body to save product in database
+        in: body
+        name: Product
+        schema:
+          $ref: '#/definitions/Product'
+      responses:
+        "200":
+          $ref: '#/responses/noContent'
+      schemes:
+      - http
+      tags:
+      - products
+produces:
+- application/json
+responses:
+  noContent: {}
+  productsResponse:
+    description: A list of products
+    schema:
+      items:
+        $ref: '#/definitions/Product'
+      type: array
+schemes:
+- http
+swagger: "2.0"
