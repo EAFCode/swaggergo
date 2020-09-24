@@ -1,6 +1,6 @@
 # Generating swagger documentation with Golang - Product API
 
-Swagger documentation is generated from the code using go-swagger package.
+Swagger documentation is generated from the code using [go-swagger](https://github.com/go-swagger/go-swagger) package.
 
 1) step: Get dependency in your  GOPATH
 ```
