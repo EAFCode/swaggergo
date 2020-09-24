@@ -7,9 +7,7 @@ Swagger documentation is generated from the code using [go-swagger](https://gith
 go get -u github.com/go-swagger/go-swagger/cmd/swagger
 ```
 2) step: Adding [metadata](https://goswagger.io/use/spec/meta.html) in your code.
-```
-https://goswagger.io/use/spec/model.html
-```
+
 3) step: Generate the file swagger.yaml using the following command:
 ```
 swagger generate spec -o ./swagger.yaml --scan-models
