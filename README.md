@@ -14,9 +14,9 @@ https://goswagger.io/use/spec/model.html
 ```
 swagger generate spec -o ./swagger.yaml --scan-models
 ```
-4) step: If you want swagger-ui add package [go-openapi](https://github.com/go-openapi/runtime/tree/master/middleware) your code
+4) step: If you want swagger-ui import package [go-openapi](https://github.com/go-openapi/runtime/tree/master/middleware) your code
 ```
-github.com/go-openapi/runtime/middleware"
+import github.com/go-openapi/runtime/middleware"
 ```
 5) step: running your code and put this link in browser:
 ```
